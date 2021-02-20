@@ -26,6 +26,8 @@ public class LoginStepDefs {
 
         LoginPage loginPage = new LoginPage();
         loginPage.login(username,password);
+
+
     }
 
     @Then("the user should be able to login")
@@ -40,8 +42,11 @@ public class LoginStepDefs {
         String username = ConfigurationReader.get("pos_manager_username");
         String password = ConfigurationReader.get("pos_manager_password");
 
+
+
         LoginPage loginPage = new LoginPage();
         loginPage.login(username,password);
+
 
     }
 
