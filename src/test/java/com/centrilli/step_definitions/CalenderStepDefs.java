@@ -1,6 +1,5 @@
 package com.centrilli.step_definitions;
 
-import com.centrilli.pages.CalenderPage;
 import com.centrilli.pages.DashboardPage;
 import com.centrilli.pages.LoginPage;
 import com.centrilli.utilities.BrowserUtils;
