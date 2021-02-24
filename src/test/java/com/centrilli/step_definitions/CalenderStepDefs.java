@@ -37,7 +37,7 @@ public class CalenderStepDefs {
     @When("the user should be able to create any info")
     public void the_user_should_be_able_to_create_any_info() throws InterruptedException {
 
-        BrowserUtils.waitFor(4);
+        BrowserUtils.waitFor(5);
 
         DashboardPage dashboardPage=new DashboardPage();
 
