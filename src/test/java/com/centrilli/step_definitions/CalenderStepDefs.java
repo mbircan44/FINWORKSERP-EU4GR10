@@ -6,6 +6,7 @@ import com.centrilli.utilities.BrowserUtils;
 import com.centrilli.utilities.ConfigurationReader;
 import com.centrilli.utilities.Driver;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class CalenderStepDefs {
@@ -50,5 +51,22 @@ public class CalenderStepDefs {
 
 
     }
+
+    @Then("the user should be able to delete any note")
+    public void the_user_should_be_able_to_delete_any_note() throws InterruptedException {
+        BrowserUtils.waitFor(5);
+
+        DashboardPage dashboardPage=new DashboardPage();
+
+        dashboardPage.comment2.click();
+        Thread.sleep(2000);
+
+        dashboardPage.delete.click();
+        dashboardPage.ok.click();
+
+
+
+    }
+
 
 }

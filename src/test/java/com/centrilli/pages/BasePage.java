@@ -50,6 +50,15 @@ public class BasePage {
     @FindBy(xpath = "//button[@class='btn btn-sm btn-primary']")
     public WebElement createBtn;
 
+    @FindBy(xpath = "(//div[@class='fc-content'])[1]")
+    public WebElement comment2;
+
+    @FindBy(xpath = "(//button[@class='btn btn-sm btn-default'])[1]")
+    public WebElement delete;
+
+    @FindBy(xpath = "(//button[@class='btn btn-sm btn-primary'])[2]")
+    public WebElement ok;
+
 
 
     public BasePage() {
