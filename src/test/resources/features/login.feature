@@ -1,3 +1,4 @@
+@login
 Feature:Users should be able to login
 
   Background:
@@ -15,7 +16,7 @@ Feature:Users should be able to login
   Scenario: Login as a inventory manager
     When the user enters the inventory manager information
     Then the user should be able to login as inventory manager
-
+@wip
   Scenario: login as a expenses manager
     When the user enters the expenses manager information
     Then the user should be able to login as expenses manager
