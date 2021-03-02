@@ -23,6 +23,14 @@ public class Driver {
         if (driver == null) {
             // this line will tell which browser should open based on the value from properties file
             String browser = ConfigurationReader.get("browser");
+            ChromeOptions chromeOptions = new ChromeOptions();
+            chromeOptions.addArguments("--ignore-ssl-errors=yes");
+            chromeOptions.addArguments("--ignore-certificate-errors");
+
+            String projectPath = System.getProperty("user.dir");
+            String relativePath = "drivers\\chropath_6_1_4_0.crx";
+            System.out.println("Chrome is launching with ChroPath...");
+            String filePath = (projectPath + "\\" + relativePath);
             switch (browser) {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
