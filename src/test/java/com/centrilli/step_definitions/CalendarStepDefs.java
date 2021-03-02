@@ -13,11 +13,10 @@ public class CalendarStepDefs {
 
     @When("User goes to Calendar page")
     public void userGoesToCalendarPage() throws InterruptedException {
-        Thread.sleep(3000);
         basepage.CalendarTab.click();
-        Thread.sleep(3000);
         BrowserUtils.waitForPageToLoad(3000);
     }
+
     @When("Click any cell, create note as Team Meeting and click create")
     public void clicksAnyCellCreatesNoteAndClickCreate() throws InterruptedException {
 
@@ -26,16 +25,13 @@ public class CalendarStepDefs {
         calendarPage.createButton.click();
 
     }
+
     @Then("Verify that Open: Team Meeting is displayed")
     public void verifyThatOpenBODMeetingIsDisplayed() {
 
         calendarPage.meetingLog.click();
         String expectedMessage = "Open: Team Meeting";
         String actualMessage = calendarPage.meetingLog.getText();
-        Assert.assertEquals(expectedMessage,actualMessage);
-    }
-    @When("User goes to Notes page")
-    public void userGoesToNotesPage() {
-        calendarPage.notesTab.click();
+        Assert.assertEquals(expectedMessage, actualMessage);
     }
 }

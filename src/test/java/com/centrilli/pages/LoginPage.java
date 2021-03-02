@@ -14,14 +14,11 @@ public class LoginPage {
     @FindBy(id="login")
     public WebElement userName;
 
-
-
     @FindBy(id="password")
     public WebElement password;
 
     @FindBy(xpath = "//*[@id=\"wrapwrap\"]/main/div/form/div[3]/button")
     public WebElement submit;
-
 
     public void login(String userNameStr, String passwordStr) {
         userName.sendKeys(userNameStr);

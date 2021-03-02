@@ -2,11 +2,11 @@
 Feature: Calendar
 
   Background:
-    Given User goes to login page
-    Then User login with valid credentials
+    Given the user is on the login page
+    When the user enters the inventory manager information
 
 
   Scenario: Calendar functionality
-    When All users can go to Calendar page
+    When User goes to Calendar page
     And Click any cell, create note as Team Meeting and click create
     Then Verify that Open: Team Meeting is displayed
