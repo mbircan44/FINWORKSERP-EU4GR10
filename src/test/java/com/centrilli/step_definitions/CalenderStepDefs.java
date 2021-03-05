@@ -40,7 +40,7 @@ public class CalenderStepDefs {
 
         BrowserUtils.waitFor(5);
 
-        DashboardPage dashboardPage=new DashboardPage();
+     DashboardPage dashboardPage=new DashboardPage();
 
         dashboardPage.comment.click();
         Thread.sleep(2000);

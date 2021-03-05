@@ -1,4 +1,4 @@
 package com.centrilli.pages;
 
-public class DashboardPage extends BasePage{
+public class DashboardPage extends CalendarPage{
 }
