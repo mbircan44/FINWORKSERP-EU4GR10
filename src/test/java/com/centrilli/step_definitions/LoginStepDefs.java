@@ -13,7 +13,7 @@ import org.openqa.selenium.By;
 public class LoginStepDefs {
     @Given("the user is on the login page")
     public void the_user_is_on_the_login_page() throws InterruptedException {
-        String url = ConfigurationReader.get("url");
+        String url = ConfigurationReader.get("url_2");
         Driver.get().get(url);
 
     }
