@@ -1,6 +1,6 @@
 package com.centrilli.step_definitions;
 
-import com.centrilli.pages.DashboardPage;
+import com.centrilli.pages.CalendarPage;
 import com.centrilli.pages.LoginPage;
 import com.centrilli.utilities.BrowserUtils;
 import com.centrilli.utilities.ConfigurationReader;
@@ -24,11 +24,13 @@ public class CalenderStepDefs {
         LoginPage loginPage = new LoginPage();
         loginPage.login(username,password);
 
-        DashboardPage dashboardPage=new DashboardPage();
-       // dashboardPage.webSide.click();
+        CalendarPage calendarPage=new CalendarPage();
+       // calendarPage.webSide.click();
 
         Thread.sleep(2000);
-        dashboardPage.calendar.click();
+        calendarPage.calendar.click();
+
+
 
 
 
@@ -40,14 +42,14 @@ public class CalenderStepDefs {
 
         BrowserUtils.waitFor(5);
 
-     DashboardPage dashboardPage=new DashboardPage();
+        CalendarPage calendarPage=new CalendarPage();
 
-        dashboardPage.comment.click();
+        calendarPage.comment.click();
         Thread.sleep(2000);
 
-        dashboardPage.inputName.sendKeys("hunterman");
+        calendarPage.inputName.sendKeys("hunterman");
 
-        dashboardPage.createBtn.click();
+        calendarPage.createBtn.click();
 
 
     }
@@ -56,13 +58,13 @@ public class CalenderStepDefs {
     public void the_user_should_be_able_to_delete_any_note() throws InterruptedException {
         BrowserUtils.waitFor(5);
 
-        DashboardPage dashboardPage=new DashboardPage();
+        CalendarPage calendarPage=new CalendarPage();
 
-        dashboardPage.comment2.click();
+        calendarPage.comment2.click();
         Thread.sleep(2000);
 
-        dashboardPage.delete.click();
-        dashboardPage.ok.click();
+        calendarPage.delete.click();
+        calendarPage.ok.click();
 
 
 
