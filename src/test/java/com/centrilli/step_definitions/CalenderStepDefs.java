@@ -10,7 +10,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class CalenderStepDefs {
-
+    CalendarPage calendarPage=new CalendarPage();
+    
     @Given("the user is on the calender page")
     public void the_user_is_on_the_calender_page() throws InterruptedException {
 
@@ -24,7 +25,7 @@ public class CalenderStepDefs {
         LoginPage loginPage = new LoginPage();
         loginPage.login(username,password);
 
-        CalendarPage calendarPage=new CalendarPage();
+
        // calendarPage.webSide.click();
 
         Thread.sleep(2000);
@@ -42,7 +43,7 @@ public class CalenderStepDefs {
 
         BrowserUtils.waitFor(5);
 
-        CalendarPage calendarPage=new CalendarPage();
+
 
         calendarPage.comment.click();
         Thread.sleep(2000);
@@ -58,7 +59,6 @@ public class CalenderStepDefs {
     public void the_user_should_be_able_to_delete_any_note() throws InterruptedException {
         BrowserUtils.waitFor(5);
 
-        CalendarPage calendarPage=new CalendarPage();
 
         calendarPage.comment2.click();
         Thread.sleep(2000);
